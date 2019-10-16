@@ -68,6 +68,10 @@ div.kb-col {
 div.important {
     background-color:rgba(128, 0, 0, 0.7);
 }
+div.hidden {
+    visibility: hidden;
+    display: none;
+}
 a {
     color: hotpink;
 }
