@@ -23,3 +23,12 @@ cat ${file} |\
             s|<div class=rateblock>(.*?)</div>||sg;' > ${file}.min
 done
 done
+
+
+# only remove background image
+
+for file in *.html
+do
+cat $file | perl -pe ' s|page_bg_with_image\{background:url\(data:image/jpeg;base64,.*?\)|page_bg_with_image{background:url(data:image/jpeg;base64,)|ig;' > $file.$$
+mv -vf $file.$$ $file
+done
