@@ -25,10 +25,11 @@ done
 done
 
 
-# only remove background image
+# only remove background image and header, left menu
 
 for file in *.html
 do
 cat $file | perl -pe ' s|page_bg_with_image\{background:url\(data:image/jpeg;base64,.*?\)|page_bg_with_image{background:url(data:image/jpeg;base64,)|ig;' > $file.$$
 mv -vf $file.$$ $file
+sed -i  '46,570d' $file
 done
