@@ -33,3 +33,8 @@ cat $file | perl -pe ' s|page_bg_with_image\{background:url\(data:image/jpeg;bas
 mv -vf $file.$$ $file
 sed -i  '46,570d' $file
 done
+
+for file in *.html
+do
+sed -i  '46,570d' $file
+done
