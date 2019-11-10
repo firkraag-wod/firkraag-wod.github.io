@@ -34,7 +34,3 @@ mv -vf $file.$$ $file
 sed -i  '46,570d' $file
 done
 
-for file in *.html
-do
-sed -i  '46,570d' $file
-done

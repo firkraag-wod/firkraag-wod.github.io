@@ -105,3 +105,7 @@ a.button:visited, a.button:active, a.button:link, .button {
 .button {
     white-space: nowrap;
 }
+a.disabled {
+    pointer-events: none;
+    cursor: default;
+}
